@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy 7 monthsary Baby girl</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #fff0f6;
+      color: #222;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .container {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 32px rgba(220,40,100,0.15);
+      padding: 40px 32px;
+      text-align: center;
+      transition: box-shadow 0.3s;
+      max-width: 600px;
+    }
+    .question-image {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 18px rgba(220,40,100,0.10);
+    }
+    h1 {
+      color: #d72660;
+      font-family: 'Brush Script MT', cursive, sans-serif;
+      font-size: 2.5em;
+      margin-bottom: 28px;
+      letter-spacing: 1px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      font-size: 1.1em;
+      padding: 12px 32px;
+      margin: 0 16px;
+      border-radius: 24px;
+      border: none;
+      cursor: pointer;
+      background: #d72660;
+      color: #fff;
+      font-weight: bold;
+      transition: 
+        transform 0.2s, 
+        background 0.2s,
+        font-size 0.2s;
+      box-shadow: 0 2px 12px rgba(215,38,96,0.08);
+    }
+    button:hover {
+      background: #a51c47;
+    }
+    #love-letter {
+      display: none;
+      margin-top: 38px;
+      background: #fff0f6;
+      border-radius: 12px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 24px rgba(220,40,100,0.10);
+      color: #333;
+      font-size: 1.13em;
+      animation: fadeIn 0.8s;
+    }
+    #love-letter h2 {
+      color: #d72660;
+      font-family: 'Brush Script MT', cursive, sans-serif;
+      font-size: 2em;
+      margin-bottom: 18px;
+    }
+    .signature {
+      margin-top: 32px;
+      text-align: right;
+      font-size: 1.1em;
+      color: #a51c47;
+      font-family: 'Georgia', serif;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: none;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="question-container">
+    <!-- Replace the src value below with your desired image file or URL -->
+    <img class="question-image" src="image.jpg" alt="Cute couple or love image">
+    <h1>Do you love me?</h1>
+    <div class="buttons">
+      <button id="yes-btn">Yes</button>
+      <button id="no-btn">No</button>
+    </div>
+  </div>
+  <div id="love-letter">
+    <h2>Dear Babyy girl,</h2>
+    <p>I'm writing this letter to show you how much I love you, I hope this kind of letter makes you happy even in this simple way baby ko. I can hardly believe that we are 7 months have already flown by since we began it together baby ko. Each moment we've shared feels like a chapter in our very own love story, and I'm so thankful to have you right there with me baby.</p>
+    <p>From the moment we first met, your contagious laughter and that warm smile of yours captured my heart completely. Your kindness and unwavering support have filled my life with such joy, and I feel incredibly fortunate to call you my own. Every single day with you is a treasure trove, brimming with sweet memories and laughter that I hold dear.</p> 
+    <p>I really love that we can chat for hours on end about absolutely anything, or simply enjoy the quiet comfort of each other. You inspire me to be a better person, and I cherish every moment, big or small, that we spend together.</p>
+    <p>As we celebrate this  monthsary, I want you to know just how much you mean to me. You're not just my girlfriend; you're my best friend, the one I confide in, and my biggest supporter. I'm buzzing with excitement thinking about all the moments ahead of us, and I promise to always cherish and love you with all my heart. Even we are apart to each other you are in my heart forever baby.</p>  
+    <p>Here's to us and all the memories we'll keep making together. I love you more than I could ever possibly say, Baby Girl. I love you po I will make bawi pag-uwi kopo.</p> 
+    <div class="signature">
+      Forever yours,<br>
+      <strong>Aleson Depano</strong>
+    </div>
+  </div>
+  <script>
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+    const loveLetter = document.getElementById('love-letter');
+    const questionContainer = document.getElementById('question-container');
+    let yesFontSize = 1.1; //em
+
+    yesBtn.addEventListener('click', function() {
+      questionContainer.style.display = 'none';
+      loveLetter.style.display = 'block';
+    });
+
+    noBtn.addEventListener('click', function() {
+      yesFontSize += 0.4;
+      yesBtn.style.fontSize = yesFontSize + 'em';
+      yesBtn.style.padding = (12 + (yesFontSize - 1.1) * 10) + 'px ' + (32 + (yesFontSize - 1.1) * 20) + 'px';
+      yesBtn.style.background = '#ed346e';
+      setTimeout(()=>{yesBtn.style.background='#d72660';}, 250);
+    });
+  </script>
+</body>
+</html>
